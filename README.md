@@ -32,6 +32,17 @@ Auto-fix what can be fixed automatically:
 npx -y markdownlint-cli --dot --fix '**/*.md'
 ```
 
+## Architecture Decision Records
+
+Significant decisions are recorded as ADRs under `docs/adr/`. The index is at
+[docs/adr/README.md](docs/adr/README.md). Use the `adr` Claude Code agent to
+add or update records.
+
+## Plans
+
+Implementation plans live under `plans/`. Use the `planning` Claude Code agent
+to create a plan before writing code.
+
 ## Claude Code agents
 
 `.claude/agents/` contains subagent definitions used with Claude Code:
@@ -40,3 +51,5 @@ npx -y markdownlint-cli --dot --fix '**/*.md'
 | --- | --- |
 | `markdown-reviewer` | Reviews `.md` files for lint errors and accuracy |
 | `markdown-fixer` | Applies lint fixes without disabling rules |
+| `adr` | Writes and maintains Architecture Decision Records |
+| `planning` | Writes implementation plans in `plans/` |
